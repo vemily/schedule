@@ -5,27 +5,55 @@
 }
 
 .border{
-    width: 480px;
+    width: 400px;
     margin: 0 auto;
     height: 450px;
     box-shadow: 5px 5px 20px 0 rgba(1,1,1,0.5);
+    position: relative;
+}
+
+.heading-reg{
+    text-align: center;
+    background-color: #CACAFF;
+    padding: 8px 5px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    max-width: 100%;
+    position: 0;
+    
+}
+
+.heading-log{
+    text-align: center;
+    background-color: #CACAFF;
+    padding: 8px 5px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    width: 100%;
 }
 
 .content{
     height: 90%;
     width: 100%;
-    padding: 60px;
+    padding: 0px;
     display: none;
-    border: 1px solid black;
+    position: relative;
+}
+
+.form{
+    padding: 40px;
 }
 
 button{
     width: 50%;
     height: 10%;
-    background-color: #E1FFFE;
-    padding: 10px 16px;
+    background-color: #CACAFF;
+    padding: 5px 16px;
     border: 0;
     float: left;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+    border: #BBBBFF 1px solid;
 }
 
 input {
@@ -42,24 +70,29 @@ input {
 }
 
 input.username {
-    background-image: url('../Images/user-icon.png');
-    background-position: 6px 6px;
+    background-image: url('../Images/user-icon.svg');
+    background-position: 8px 6px;
     background-size: 30px 30px;
     background-repeat: no-repeat;
 }
 
 input.password {
-    background-image: url('../Images/pdw-icon.png');
-    background-position: 6px 6px;
+    background-image: url('../Images/pdw-icon.svg');
+    background-position: 8px 6px;
     background-size: 30px 30px;
     background-repeat: no-repeat;
 }
 
 input.email {
-    background-image: url('../Images/email-icon.png');
-    background-position: 2px 0;
-    background-size: 60px 50px;
+    background-image: url('../Images/email-icon.svg');
+    background-position: 8px 6px;
+    background-size: 30px 30px;
     background-repeat: no-repeat;
+}
+
+input.submit{
+    background-color: #FFDFEF;
+    border: 0;
 }
 
 /* When the input field gets focus, change its width to 100% */

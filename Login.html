@@ -1,20 +1,31 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="CSS/login-reg.css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 <body>
     <div class="border">
         <div class="content" id="register">
-            <div class="reg-form">
+        <div class="heading-reg">Register</div>
+            <div class="form">
             <form>
                 <input type="text" name="username" class="username" placeholder="Username" /> 
                 <input type="password" name="password" class="password" placeholder="Password" /> 
                 <input type="password" name="con-password" class="password" placeholder="Password" />
                 <input type="email" name="email" class="email" placeholder="Email" />
-                <input type="submit" />
+                <input type="submit" class="submit" />
             </form>
             </div>
         </div>
-        <div class="content" id="login"></div>
+        <div class="content" id="login">
+        <div class="heading-log">Login</div>
+            <div class="form">
+            <form>
+                <input type="text" name="username" class="username" placeholder="Username" /> 
+                <input type="password" name="password" class="password" placeholder="Password" /> 
+                <input type="submit" class="submit" />
+            </form>
+            </div>
+        </div>
         <button class="btnTab" onclick="openFunc('register')" id="default">Register</button>
         <button class="btnTab" onclick="openFunc('login')">Login</button>
     </div>

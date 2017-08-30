@@ -1,0 +1,116 @@
+.modal {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.modal-content{
+    width: 60%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    height: 450px;
+}
+
+.divider{
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 50px;
+    height: 340px;
+}
+
+.content{
+    text-align: center;
+    display:none;
+    height: 300px;
+}
+
+h1,h2{
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+h1{
+    font-size: 40px;
+}
+
+input[type=text]{
+    width: 500px;
+    padding: 14 15px;
+    font-size: 24px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+button, input[type=submit]{
+    margin: 18px;
+    width: 150px;
+    padding: 13px;
+    border-radius: 8px;
+    background-color: #E3E0FA;
+    font-size: 20px;
+    border: 2px solid #D7D1F8;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  float: right;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor:pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #E6DBFF;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+  background-color: #C4ABFE;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

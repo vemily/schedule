@@ -1,0 +1,89 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/profile.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Patrick+Hand+SC" rel="stylesheet">
+</head>
+<body>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+          <div class="divider">
+          <div class="content">
+              <h1>Enter Your Display Name</h1>
+              <form>
+                <input type="text" name="display_name" placeholder="Enter Your Display Name" /><br />
+                <button>Submit</button>
+              </form>
+          </div>
+          
+          <div class="content">
+              <h1>Set Up A Milestone:</h1>
+              <form>
+                <input type="text" name="milestone" placeholder="Enter your milestone..." /><br />
+                <button>Submit</button>
+              </form>
+              <p>Read our guideline here for how to setup a milestone.</p>
+          </div>
+          
+          <div class="content">
+              <h1>Alright, Let's Get Started!</h1>
+              <input type="submit" value="Go!" />
+          </div>
+          
+
+          </div>
+          <a class="prev" onclick="plusContent(-1)">&#10094;</a>
+          <a class="next" onclick="plusContent(1)">&#10095;</a>
+          <div style="text-align:center">
+              <span class="dot" onclick="currentContent(1)"></span>
+              <span class="dot" onclick="currentContent(2)"></span>
+              <span class="dot" onclick="currentContent(3)"></span>
+          </div>
+              
+      </div>
+
+    </div>
+    
+    <script>
+        function plusContent(n) {
+          showContent(contenIndex += n);
+        }
+
+        function currentContent(n) {
+          showContent(contenIndex = n);
+        }
+        var contentIndex = 1;
+        showContent(contentIndex);
+
+        function plusContent(n) {
+          showContent(contentIndex += n);
+        }
+
+        function currentContent(n) {
+          showContent(contentIndex = n);
+        }
+
+        function showContent(n) {
+          var i;
+          var content = document.getElementsByClassName("content");
+          var dots = document.getElementsByClassName("dot");
+          
+          if (n > content.length) {contentIndex = 1}
+          if (n < 1) {contentIndex = content.length}
+          for (i = 0; i < content.length; i++) {
+            content[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          content[contentIndex-1].style.display = "block";
+          dots[contentIndex-1].className += " active";
+        }
+        
+        function showNav(n){
+          var prev = document.getElementsByClassName("prev");
+          var next = document.getElementsByClassName("next");
+          if (contentIndex = 1) {prev.style.display="none"}
+        }
+    </script>
+</body>

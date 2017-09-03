@@ -1,26 +1,49 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="CSS/login-reg.css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 <body>
     <div class="border">
         <div class="content" id="register">
-            <div class="reg-form">
+        <div class="heading-reg">Register</div>
+            <div class="form">
             <form>
                 <input type="text" name="username" class="username" placeholder="Username" /> 
                 <input type="password" name="password" class="password" placeholder="Password" /> 
                 <input type="password" name="con-password" class="password" placeholder="Confirm Password" />
                 <input type="email" name="email" class="email" placeholder="Email" />
-                <input type="submit" />
+                <input type="submit" class="submit" />
             </form>
             </div>
         </div>
-        <div class="content" id="login">Login</div>
-        <button onclick="flip()">Login</button>
+        <div class="content" id="login">
+        <div class="heading-log">Login</div>
+            <div class="form">
+            <form>
+                <input type="text" name="username" class="username" placeholder="Username" /> 
+                <input type="password" name="password" class="password" placeholder="Password" /> 
+                <input type="submit" class="submit" />
+            </form>
+            </div>
+        </div>
+
+        <button class="btnTab" onclick="openFunc('register')" id="default">Register</button>
+        <button class="btnTab" onclick="openFunc('login')">Login</button>
     </div>
 	
 	<script>
-	function flip() {
-        $('.content').toggleClass('flipped');
-    }   
+	function openFunc(func) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, content;
+    content = document.getElementsByClassName("content");
+    for (i = 0; i < content.length; i++) {
+        content[i].style.display = "none";
+    }
+
+    document.getElementById(func).style.display = "block";
+    }
+    // Get the element with id="default" and click on it
+    document.getElementById("default").click();
 	</script>
 </body>
